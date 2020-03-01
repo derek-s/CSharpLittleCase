@@ -31,3 +31,7 @@ for($i=0;$i -le $diskNum;$i++){
         $selectDisk, "offline disk" | diskpart
         }
 }
+
+# 设置电源管理
+& "powercfg" -x disk-timeout-ac 1
+& "powercfg" -x disk-timeout-dc 1
